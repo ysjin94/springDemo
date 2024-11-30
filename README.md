@@ -31,4 +31,4 @@ Steps to set up the project on your local machine:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repository-name.git
+   git clone https://github.com/ysjin94/springDemo.git
