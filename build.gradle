@@ -23,7 +23,7 @@ dependencies {
 
 	//JDBC Driver added - MySql
 	implementation 'io.github.cdimascio:dotenv-java:3.0.0'
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'mysql:mysql-connector-java:8.0.33'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
