@@ -30,19 +30,19 @@ public class SpringConfig {
     public SpringConfig(EntityManager em) {
         this.em = em;
     }
-
-    @Bean
-    public DataSource dataSource() {
-        Dotenv dotenv = Dotenv.configure().load();
-        HikariDataSource hikariDataSource = new HikariDataSource();
-        hikariDataSource.setJdbcUrl(dotenv.get("MYSQL_URL"));
-        hikariDataSource.setUsername(dotenv.get("MYSQL_USERNAME"));
-        hikariDataSource.setPassword(dotenv.get("MYSQL_PASSWORD"));
-        hikariDataSource.setMaximumPoolSize(10);
-        hikariDataSource.setMinimumIdle(2);
-        hikariDataSource.setIdleTimeout(30000);
-        return hikariDataSource;
-    }
+//
+//    @Bean
+//    public DataSource dataSource() {
+//        Dotenv dotenv = Dotenv.configure().load();
+//        HikariDataSource hikariDataSource = new HikariDataSource();
+//        hikariDataSource.setJdbcUrl(dotenv.get("MYSQL_URL"));
+//        hikariDataSource.setUsername(dotenv.get("MYSQL_USERNAME"));
+//        hikariDataSource.setPassword(dotenv.get("MYSQL_PASSWORD"));
+//        hikariDataSource.setMaximumPoolSize(10);
+//        hikariDataSource.setMinimumIdle(2);
+//        hikariDataSource.setIdleTimeout(30000);
+//        return hikariDataSource;
+//    }
 
     @Bean
     public MemberService memberService() {

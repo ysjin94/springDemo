@@ -3,12 +3,13 @@ package com.springInt.spring_demo.domain;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "tb_member_springDemo")
 public class Member {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "username")
+    @Column(name = "name")
     private String name;
 
     public Long getId() {
