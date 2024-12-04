@@ -1,5 +1,6 @@
 package com.springInt.spring_demo;
 
+import com.springInt.spring_demo.aop.TimeTraceAop;
 import com.springInt.spring_demo.repository.*;
 import com.springInt.spring_demo.service.MemberService;
 import com.zaxxer.hikari.HikariDataSource;
@@ -9,6 +10,7 @@ import jakarta.persistence.PersistenceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 
 import javax.sql.DataSource;
 
@@ -37,6 +39,9 @@ public class SpringConfig {
 //        this.em = em;
 //    }
 
+    /**
+     *  Injection Spring JPA
+     */
     private final MemberRepository memberRepository;
     @Autowired
     public SpringConfig(MemberRepository memberRepository) {
@@ -70,4 +75,8 @@ public class SpringConfig {
 //        return new JpaMemberRepository(em);
 //    }
 
+    @Bean
+    public TimeTraceAop timeTraceAop(){
+        return new TimeTraceAop();
+    }
 }

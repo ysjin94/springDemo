@@ -44,7 +44,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     }
 
     @Override
-    public Optional<Member> findByUsername(String username) {
+    public Optional<Member> findByName(String username) {
         List<Member> result = jdbcTemplate.query("select * from tb_member_springDemo where name = ?", memberRowMapper(), username);
         return result.stream().findAny();
     }

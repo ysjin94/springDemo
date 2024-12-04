@@ -9,5 +9,5 @@ public interface SpringDataJpaMemberRepository extends JpaRepository<Member, Lon
 {
     //JPQL SELECT M FROM MEMBER M WHERE M.NAME = ?
     @Override
-    Optional<Member> findByUsername(String username);
+    Optional<Member> findByName(String name);
 }

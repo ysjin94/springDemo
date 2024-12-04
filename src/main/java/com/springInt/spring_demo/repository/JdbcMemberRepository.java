@@ -71,7 +71,7 @@ public Optional<Member> findById(Long id) {
 }
 
     @Override
-    public Optional<Member> findByUsername(String username) {
+    public Optional<Member> findByName(String username) {
         String sql = "select * from tb_member_springDemo where name = ?";
         Connection conn = null;
         PreparedStatement pstmt = null;
